@@ -12,7 +12,7 @@ pipeline {
 	  
 	steps {
 	    script {
-		app= docker.build("<docker_login_id>/node-app")
+		app= docker.build("moharo/node-app")
 		app.inside {
 			sh 'echo $(curl localhost:8080)'
 			}
