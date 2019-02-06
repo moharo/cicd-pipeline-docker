@@ -9,8 +9,7 @@ pipeline {
             }
         }
         stage('Build Docker Image') {
-	  
-	steps {
+	  	steps {
 	    script {
 		app= docker.build("moharo/node-app")
 		app.inside {
@@ -18,7 +17,7 @@ pipeline {
 			}
 		}
 	    }
-         
+	}
 	stage('Push Docker image') {
 		steps {
 		script {
